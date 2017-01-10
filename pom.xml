@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.soulgalore</groupId>
 	<artifactId>Crawler</artifactId>
-	<version>1.5.17</version>
+	<version>1.5.18</version>
 	<name>Crawler</name>
 	<packaging>jar</packaging>
 	<description>Simple java crawler</description>
