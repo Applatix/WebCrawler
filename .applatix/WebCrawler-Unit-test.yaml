@@ -17,3 +17,7 @@ inputs:
     path: "/src"
   parameters:
     binary:
+outputs:
+  artifacts:
+    test-results:
+      path: "/src/WebCrawler/target/surefire-reports"
