@@ -48,6 +48,10 @@ steps:
     template: WebCrawler-Unit-test
     parameters:
       binary: "%%steps.build.binary%%"
+-JUnit-test-report:
+    template: WebCrawler-Unit-test-report
+    parameters:
+      binary: "%%steps.build.binary%%"      
 labels:
   release: development
   milestone: m7      
