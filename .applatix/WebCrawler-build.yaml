@@ -1,8 +1,8 @@
 ---
 type: service_template
 subtype: container
-name: maven-test
-description: test example
+name: WebCrawler-build
+description: maven build for web crawler repository.
 container:
   resources:
     mem_mib: 1024
@@ -10,10 +10,14 @@ container:
     disk_gb: 20
   image: "applatix/maven"
   docker_options: ""
-  command: "sh -c 'cd /src && ls -ltr && mvn clean test'"
+  command: "sh -c 'cd /src && mvn package -DskipTests'"
 inputs:
   artifacts:
-  - from: "%%binary%%"
+  - from: "%%code%%"
     path: "/src"
   parameters:
+    code:
+outputs:
+  artifacts:
     binary:
+      path: "/src"

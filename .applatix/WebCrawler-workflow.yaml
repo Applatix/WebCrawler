@@ -1,0 +1,53 @@
+---
+type: service_template
+subtype: workflow
+name: WebCrawler-workflow
+description: WebCrawler Build/Unit Test workflow
+inputs:
+  parameters:
+    commit:
+      default: "%%session.commit%%"
+    repo:
+      default: "%%session.repo%%"
+steps:
+- checkout:
+    template: axscm-checkout
+- build:
+    template: WebCrawler-build
+    parameters:
+      code: "%%steps.checkout.code%%"
+- JUnit-test1:
+    template: WebCrawler-Unit-test
+    parameters:
+      binary: "%%steps.build.binary%%"
+  JUnit-test2:
+    template: WebCrawler-Unit-test
+    parameters:
+      binary: "%%steps.build.binary%%"
+  JUnit-test3:
+    template: WebCrawler-Unit-test
+    parameters:
+      binary: "%%steps.build.binary%%"
+  JUnit-test4:
+    template: WebCrawler-Unit-test
+    parameters:
+      binary: "%%steps.build.binary%%"
+  JUnit-test5:
+    template: WebCrawler-Unit-test
+    parameters:
+      binary: "%%steps.build.binary%%"
+  JUnit-test6:
+    template: WebCrawler-Unit-test
+    parameters:
+      binary: "%%steps.build.binary%%"
+  JUnit-test7:
+    template: WebCrawler-Unit-test
+    parameters:
+      binary: "%%steps.build.binary%%"
+  JUnit-test8:
+    template: WebCrawler-Unit-test
+    parameters:
+      binary: "%%steps.build.binary%%"
+labels:
+  release: development
+  milestone: m7      

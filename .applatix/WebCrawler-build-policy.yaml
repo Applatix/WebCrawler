@@ -1,0 +1,30 @@
+---
+type: policy
+name: WebCrawler Build Policy
+description: Policy to trigger build and unit test workflow for all events
+template: WebCrawler-workflow
+parameters:
+  namespace: "WebCrawler"
+  version: "development"
+notifications:
+  - when:
+      - on_start
+      - on_success
+      - on_failure
+    whom:
+      - committer
+      - author
+  - when:
+      - on_change
+    whom:
+      - no-reply@applatix.com
+when:
+  - event: on_push
+    target_branches:
+      - ".*"
+  - event: on_pull_request
+    target_branches:
+      - ".*"
+  - event: on_pull_request_merge
+    target_branches:
+      - ".*"
