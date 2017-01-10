@@ -20,4 +20,6 @@ inputs:
 outputs:
   artifacts:
     test-results:
-      path: "/src/WebCrawler/target/surefire-reports"
+      path: "/src/target/surefire-reports"
+      meta_data:
+        - browsable
