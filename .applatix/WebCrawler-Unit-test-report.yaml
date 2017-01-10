@@ -1,7 +1,7 @@
 ---
 type: service_template
 subtype: container
-name: WebCrawler-generate-Unit-test-report
+name: WebCrawler-Unit-test-report
 description: JUnit HTML report creation for web crawler
 container:
   resources:
