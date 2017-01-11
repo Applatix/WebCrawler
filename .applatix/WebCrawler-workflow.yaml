@@ -53,7 +53,7 @@ steps:
     parameters:
       binary: "%%steps.build.binary%%"
     flags:
-      ignore_error: true     
+      always_run : true     
 labels:
   release: development
   milestone: m7      
