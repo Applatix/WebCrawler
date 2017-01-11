@@ -51,7 +51,9 @@ steps:
 - JUnit-test-report:
     template: WebCrawler-Unit-test-report
     parameters:
-      binary: "%%steps.build.binary%%"      
+      binary: "%%steps.build.binary%%"
+    flags:
+      ignore_error: true     
 labels:
   release: development
   milestone: m7      
