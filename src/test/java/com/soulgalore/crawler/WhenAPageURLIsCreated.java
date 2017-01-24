@@ -75,7 +75,7 @@ public class WhenAPageURLIsCreated {
 			throws MalformedURLException, URISyntaxException,
 			UnsupportedEncodingException {
 
-		CrawlerURL url = new CrawlerURL("http://www.applatix.com");
+		CrawlerURL url = new CrawlerURL("http://www..com");
 		assertThat(url.isWrongSyntax(), is(false));
 
 		// faulty url
