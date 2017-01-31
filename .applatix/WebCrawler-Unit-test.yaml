@@ -17,3 +17,29 @@ inputs:
     path: "/src"
   parameters:
     binary:
+
+---
+type: service_template
+subtype: container
+name: WebCrawler-Unit-test-with-xml
+description: JUnit test for web crawler with XML result
+container:
+  resources:
+    mem_mib: 1024
+    cpu_cores: 0.5
+    disk_gb: 20
+  image: "applatix/maven"
+  docker_options: ""
+  command: "sh -c 'cd /src && mvn clean test'"
+inputs:
+  artifacts:
+  - from: "%%binary%%"
+    path: "/src"
+  parameters:
+    binary:
+outputs:
+  artifacts:
+    result:
+      path: "/src/target"
+      meta_data:
+        - "test_reporting:junit"

@@ -1,0 +1,25 @@
+---
+type: service_template
+subtype: workflow
+name: WebCrawler-workflow
+description: WebCrawler Build/Unit Test workflow
+inputs:
+  parameters:
+    commit:
+      default: "%%session.commit%%"
+    repo:
+      default: "%%session.repo%%"
+steps:
+- checkout:
+    template: axscm-checkout
+- build:
+    template: WebCrawler-build
+    parameters:
+      code: "%%steps.checkout.code%%"
+- test:
+    template: WebCrawler-Unit-test-with-xml
+    parameters:
+      binary: "%%steps.build.binary%%"
+labels:
+  release: development
+  milestone: m7      
