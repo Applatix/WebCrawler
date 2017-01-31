@@ -1,7 +1,7 @@
 ---
 type: service_template
 subtype: workflow
-name: WebCrawler-workflow
+name: WebCrawler-workflow-with-xml
 description: WebCrawler Build/Unit Test workflow
 inputs:
   parameters:
