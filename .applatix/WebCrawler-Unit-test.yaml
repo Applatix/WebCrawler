@@ -40,6 +40,6 @@ inputs:
 outputs:
   artifacts:
     result:
-      path: "/src/target"
+      path: "/src/target/surefire-reports"
       meta_data:
         - "test_reporting:junit"
