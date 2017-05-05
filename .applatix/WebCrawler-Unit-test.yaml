@@ -1,6 +1,5 @@
 ---
-type: service_template
-subtype: container
+type: container
 name: WebCrawler-Unit-test
 description: JUnit test for web crawler
 container:
@@ -19,8 +18,7 @@ inputs:
     binary:
 
 ---
-type: service_template
-subtype: container
+type: container
 name: WebCrawler-Unit-test-with-xml
 description: JUnit test for web crawler with XML result
 container:

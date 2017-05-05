@@ -1,6 +1,5 @@
 ---
-type: service_template
-subtype: container
+type: container
 name: WebCrawler-build
 description: maven build for web crawler repository.
 container:
